@@ -1,1 +1,0 @@
-<?php header('Location: /projeto1.html'); ?>
