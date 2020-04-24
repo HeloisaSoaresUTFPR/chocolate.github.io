@@ -1,1 +1,1 @@
-<?php header('Location:: /projeto1.html'); ?>
+<?php include_once("index.html"); ?>
