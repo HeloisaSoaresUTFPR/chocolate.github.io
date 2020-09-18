@@ -65,10 +65,51 @@
       </div>
 
       <div class="dropdown-busca"><!--LOJA-->
-
-        <button class="dropbtn-busca">Buscar...</button>
-      
+        <input type="text" onkeyup="Pesquisar(this.value)" class="dropbtn-busca">Digita..</input>
       </div>
+
+       <!--consulta api-->
+
+      <script type="text/javascript" charset="utf-8">
+          
+          function Pesquisar(texto) {
+
+                var request = new XMLHttpRequest();
+
+                request.open('GET',
+                'https://api.openbrewerydb.org/breweries/search?query='+ texto,
+                true);
+
+                request.onreadystatechange = function () {
+                    if(request.readyState === 4 && request.status === 200) {
+                      var listaObjeto = JSON.parse(request.responseText);
+
+                        for(var i = 0; i < 10; i++) {
+
+                            
+                            var caixadobloco = '<div class="caixaLateral lateralAjuste">' + 
+                                        '<a href="#" >' +
+                                          
+                                            '<div class="texto">' +
+                                              '<h6 class="roxo tamanho">'+ listaObjeto[i]['name'] +'</h6>'+
+                                              '<h5 class="tamanho">'+ listaObjeto[i]['website_url'] +'</h5>'+
+                                                
+                                            '</div>' +
+                                        '</a>' +
+                                    '</div>';
+
+                            var htmlObject = document.createElement('div');
+                            htmlObject.innerHTML = caixadobloco;
+
+                            document.getElementById("lista").appendChild(htmlObject);
+
+                        }
+                    }
+                }
+
+                request.send();
+            }
+      </script>
 
       <!--IMAGENS MENU-->
 
@@ -127,6 +168,9 @@
   </header>
   
   <main>
+    <div id="lista" class= "planodefundo" > 
+
+    </div>
 
     <div class = "green">
     

@@ -188,7 +188,7 @@ body{
   .dropbtn-busca {
     background-color: rgba(255, 255, 255, 0.3);
     color: white;
-    padding: 8px 80px 8px 8px;
+    padding: 8px 1px 8px 8px;
     font-size: 13px;
     border: none;
     cursor: pointer;
@@ -362,3 +362,63 @@ body{
       display: none;
     }
   }
+
+  .caixaGeral{
+    max-width: 88%;
+    height: auto;
+    margin: 0 auto;
+    float: none;
+    background-color: red;
+}
+
+.teste{
+    background-color: yellow;
+    width: 100%;
+    height: 31px;
+    float: right;
+    border: 2px;
+    border-radius: 5px;
+}
+.caixaLateral{
+    background-color: deeppink;
+    width: auto;
+    height: auto;
+    float: right;
+    border: 2px;
+    border-radius: 5px;
+    box-shadow: 12px 15px 20px 0px rgba(46, 61, 73, 0.37);
+}
+
+.caixaLateral img {
+    width: auto;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    border: 2px;
+    border-radius: 5px;
+}
+.caixaLateral h5 {
+    text-decoration: none;
+    color: white;
+}
+
+.caixaLateral p {
+    color: white;
+}
+
+.lateralAjuste{
+    margin: 110px 98px 0px 0px;
+    padding: 14px 16px 5px 17px;
+}
+
+.texto{
+  color: white;
+  cursor: pointer;
+  font-family: sans-serif;
+  font: 10px;
+}
+
+
+
+.planodefundo{
+  background-color: #f2902e;
+}
